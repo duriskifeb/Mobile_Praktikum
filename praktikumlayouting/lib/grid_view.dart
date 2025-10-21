@@ -3,25 +3,59 @@ import 'package:flutter/material.dart';
 class GridViewExample extends StatelessWidget {
   const GridViewExample({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text('Container Example')),
+        appBar: AppBar(title: const Text('GridView Example')),
 
-        body: Center(
-          child: Container(
-            width: 200,
-            height: 200,
+        body: GridView.count(
+          //grid dengan 2 kolom
+          crossAxisCount: 2,
 
-            decoration: BoxDecoration(
-              color: Colors.red,
-              border: Border.all(color: Colors.black, width: 5),
+          //jarak antar item
+          crossAxisSpacing: 5,
+
+          //jarak antar baris
+          mainAxisSpacing: 10.0,
+
+          children: <Widget>[
+            Container(
+              width: 100,
+              height: 100,
+              decoration: BoxDecoration(
+                color: Colors.red,
+                border: Border.all(color: Colors.purple, width: 4),
+              ),
             ),
 
-            child: Text('Ini Container'),
-          ),
+            Container(
+              width: 100,
+              height: 100,
+              decoration: BoxDecoration(
+                color: Colors.red,
+                border: Border.all(color: Colors.purple, width: 4),
+              ),
+            ),
+
+            Container(
+              width: 100,
+              height: 100,
+              decoration: BoxDecoration(
+                color: Colors.red,
+                border: Border.all(color: Colors.purple, width: 4),
+              ),
+            ),
+
+            Container(
+              width: 100,
+              height: 100,
+              decoration: BoxDecoration(
+                color: Colors.red,
+                border: Border.all(color: Colors.purple, width: 4),
+              ),
+            ),
+          ],
         ),
       ),
     );

@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Aplikasi Blog',
+      title: 'UTS BANG',
       theme: ThemeData(primarySwatch: Colors.indigo, useMaterial3: true),
       home: const BlogHomePage(),
     );
@@ -53,32 +53,76 @@ class _BlogHomePageState extends State<BlogHomePage> {
           padding: EdgeInsets.zero,
           children: [
             UserAccountsDrawerHeader(
-              accountEmail: const Text('Rizky'),
-              accountName: const Text('rizky.nakal@gmail.com'),
+              accountEmail: const Text('duriskifeb'),
+              accountName: const Text('rizkyfeb@student.telkomuniversity.ac.id'),
               currentAccountPicture: CircleAvatar(
                 backgroundColor: Colors.white,
-                child: Text(
-                  'R',
-                  style: TextStyle(fontSize: 40.0, color: Colors.indigo),
-                ),
-              ),
+                child: Icon(Icons.person, size: 50.0, color: Colors.indigo),
+              ),  
               decoration: const BoxDecoration(color: Colors.indigoAccent),
             ),
             ListTile(
-              leading: const Icon(Icons.person),
-              title: const Text('Profile Saya'),
-              onTap: () => Navigator.pop(context),
+              leading: const Icon(Icons.account_circle),
+              title: const Text('Profil Saya'),
+              onTap: () {
+                showDialog(
+                  context: context,
+                  builder: (context) => AlertDialog(
+                    backgroundColor: Colors.blue[100],
+                    title: const Text('Profil Saya'),
+                    content: const Text('Ini adalah dialog Profil Saya.'),
+                    actions: [
+                      TextButton(
+                        onPressed: () => Navigator.pop(context),
+                        child: const Text('Tutup'),
+                      ),
+                    ],
+                  ),
+                );
+              },
             ),
             ListTile(
               leading: const Icon(Icons.settings),
               title: const Text('Pengaturan'),
-              onTap: () => Navigator.pop(context),
+              onTap: () {
+                showDialog(
+                  context: context,
+                  builder: (context) => AlertDialog(
+                    backgroundColor: Colors.green[100],
+                    title: const Text('Pengaturan'),
+                    content: const Text(
+                      'Ini adalah dialog Pengaturan aplikasi.',
+                    ),
+                    actions: [
+                      TextButton(
+                        onPressed: () => Navigator.pop(context),
+                        child: const Text('Oke'),
+                      ),
+                    ],
+                  ),
+                );
+              },
             ),
             const Divider(),
             ListTile(
               leading: const Icon(Icons.logout),
-              title: const Text('Log-out'),
-              onTap: () => Navigator.pop(context),
+              title: const Text('Logout'),
+              onTap: () {
+                showDialog(
+                  context: context,
+                  builder: (context) => AlertDialog(
+                    backgroundColor: Colors.red[100],
+                    title: const Text('Logout'),
+                    content: const Text('Anda sudah logout.'),
+                    actions: [
+                      TextButton(
+                        onPressed: () => Navigator.pop(context),
+                        child: const Text('Tutup'),
+                      ),
+                    ],
+                  ),
+                );
+              },
             ),
           ],
         ),
@@ -120,11 +164,10 @@ class DashboardTab extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Selamat Datang Rizky'),
-          const Text('Ini adalah ringkasan stastistik blog anda'),
+          Text('Selamat Datang Rizky 🤟'),
           const SizedBox(height: 24),
           Text(
-            'Stakstistik Bulan Ini',
+            'Bacaan Bulan Ini',
             style: Theme.of(context).textTheme.titleLarge,
           ),
           const SizedBox(height: 12),
@@ -145,9 +188,9 @@ class DashboardTab extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                _buildStatColumn('Postingan', '25'),
-                _buildStatColumn('Dilihat', '25'),
-                _buildStatColumn('Suka', '25'),
+                _buildStatColumn('Postingan', '05'),
+                _buildStatColumn('Dilihat', '02'),
+                _buildStatColumn('Suka', '2005'),
               ],
             ),
           ),
@@ -421,7 +464,7 @@ class FeaturedTab extends StatelessWidget {
             controller: controller,
             children: <Widget>[
               buildFeaturedPage(
-                'cara menulis TA ndang lulus',
+                'Tips ketereima magang di Google',
                 Colors.purple[100]!,
               ),
               buildFeaturedPage(
@@ -429,7 +472,11 @@ class FeaturedTab extends StatelessWidget {
                 Colors.purple[100]!,
               ),
               buildFeaturedPage(
-                'cara menulis pahala biar jadi anak baik',
+                'Tips menjadi developer handal dalam 1 bulan',
+                Colors.purple[100]!,
+              ),
+              buildFeaturedPage(
+                'Rahasia Malam Lailatul Qadar',
                 Colors.purple[100]!,
               ),
             ],

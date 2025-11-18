@@ -15,7 +15,7 @@ class ListViewExample extends StatelessWidget {
       height: 100,
       decoration: BoxDecoration(
         color: Colors.red,
-        border: Border.all(color: Colors.purple, width: 4),
+        border: Border.all(color: const Color.fromARGB(255, 28, 160, 149), width: 4),
       ),
     ),
 
@@ -23,7 +23,7 @@ class ListViewExample extends StatelessWidget {
       height: 100,
       decoration: BoxDecoration(
         color: Colors.red,
-        border: Border.all(color: Colors.purple, width: 4),
+        border: Border.all(color: const Color.fromARGB(255, 51, 117, 25), width: 4),
       ),
     ),
 
@@ -31,7 +31,7 @@ class ListViewExample extends StatelessWidget {
       height: 100,
       decoration: BoxDecoration(
         color: Colors.red,
-        border: Border.all(color: Colors.purple, width: 4),
+        border: Border.all(color: const Color.fromARGB(255, 1, 3, 97), width: 4),
       ),
     ),
 

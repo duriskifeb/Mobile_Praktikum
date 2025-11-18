@@ -8,7 +8,7 @@ import 'package:praktikumlayouting/row.dart';
 void main() {
   // runApp(const ColumnExample());
   // runApp(ContainerExample());
-  runApp(const GridViewExample());
+  // runApp(const GridViewExample());
   // runApp(const RowExample());
-  // runApp(ListViewExample());
+  runApp(ListViewExample());
 }

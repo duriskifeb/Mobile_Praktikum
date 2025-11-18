@@ -10,13 +10,6 @@ class Tabview extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: const Text("Tab View Example"),
-          // bottom: const TabBar(
-          //   tabs: [
-          //     Tab(icon: Icon(Icons.home), text: "Home",),
-          //     Tab(icon: Icon(Icons.favorite), text: "Favorite",),
-          //     Tab(icon: Icon(Icons.settings), text: "Settings",),
-          //   ],
-          // ),
         ),
         body: const TabBarView(
           children: [
@@ -28,9 +21,9 @@ class Tabview extends StatelessWidget {
         bottomNavigationBar: const Material(
           color: Colors.blue,
           child: TabBar(
-            indicatorColor: Colors.white,
-            labelColor: Colors.white,
-            unselectedLabelColor: Colors.white70,
+            indicatorColor: Color.fromARGB(255, 0, 0, 0),
+            labelColor: Color.fromARGB(255, 0, 0, 0),
+            unselectedLabelColor: Color.fromARGB(179, 0, 0, 0),
             tabs: [
               Tab(icon: Icon(Icons.home), text: "Beranda"),
               Tab(icon: Icon(Icons.favorite), text: "Favorite"),
